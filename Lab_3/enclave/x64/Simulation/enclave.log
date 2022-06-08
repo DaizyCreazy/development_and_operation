@@ -5,7 +5,6 @@
   enclave.vcxproj -> D:\Notebook\Labs_Kavallini_181_331\Lab_3\x64\Simulation\enclave.dll
   sign the enclave
   The required memory is 0x165000.
-  Succeed.
   <EnclaveConfiguration>
       <ProdID>0</ProdID>
       <ISVSVN>0</ISVSVN>
@@ -17,3 +16,4 @@
       <MiscSelect>0</MiscSelect>
       <MiscMask>0xFFFFFFFF</MiscMask>
   </EnclaveConfiguration>
+  Succeed.

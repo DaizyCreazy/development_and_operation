@@ -14,10 +14,10 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="Generated Files">
-      <UniqueIdentifier>{942bbebd-f7e6-4f91-ad3d-cf420c5cad66}</UniqueIdentifier>
+      <UniqueIdentifier>{3accd560-2ff0-448a-afb7-bb5408e287ce}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{5ec912d3-aa30-443b-859d-569d111e6083}</UniqueIdentifier>
+      <UniqueIdentifier>{5f8ce946-5d47-4168-8da7-6ca2d5ae9e07}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
