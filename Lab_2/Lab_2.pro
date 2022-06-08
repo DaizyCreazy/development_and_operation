@@ -1,6 +1,7 @@
 QT += quick
 QT += widgets
 QT += printsupport
+QT += gui
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -31,7 +32,11 @@ HEADERS += \
 
 include (D:\Notebook\Labs_Kavallini_181_331\Lab_2\SortFilterProxyModel-master/SortFilterProxyModel.pri)
 
+
 INCLUDEPATH += D:\Notebook\Qt\Tools\OpenSSL\Win_x64\include
 LIBS += -L"D:\Notebook\Qt\Tools\OpenSSL\Win_x64\bin"
 LIBS += -L"D:\Notebook\Qt\Tools\OpenSSL\Win_x64\lib" -llibssl
 LIBS += -L"D:\Notebook\Qt\Tools\OpenSSL\Win_x64\lib" -llibcrypto
+
+
+

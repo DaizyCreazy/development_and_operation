@@ -10,6 +10,12 @@ ApplicationWindow {
     height: 450
     visible: true
 
+
+    maximumHeight: 450
+    maximumWidth: 600
+    minimumHeight: 450
+    minimumWidth: 600
+
     ListModel {
         id: accountModel
     }
@@ -124,11 +130,11 @@ ApplicationWindow {
                 Rectangle {
                     y: 10
                     x: 10
-                    width: 580
+                    width: 360
                     height: 40
                     TextField {
                         id: search
-                        width: 580
+                        width: 360
                         height: 40
                         placeholderText: qsTr("Поиск...")
                         font.pixelSize: 17
@@ -136,6 +142,32 @@ ApplicationWindow {
                             search.focus = true
                         }
 
+                    }
+
+                    Button{
+                        id: button_add_new
+                        x: 370
+                        height: 40
+                        width: 100
+                        anchors.leftMargin: 10
+                        text: "Добавить"
+                        font.pixelSize: 16
+                        onClicked: {
+                            window_add.visible = true
+                        }
+                    }
+
+                    Button{
+                        id: button_to_print
+                        height: 40
+                        x: 480
+                        width: 100
+                        anchors.leftMargin: 90
+                        text: "Печать"
+                        font.pixelSize: 16
+                        onClicked: {
+                            Backend.print_all_data()
+                        }
                     }
                 }
 
@@ -155,7 +187,7 @@ ApplicationWindow {
                         text: site
                         width: 80
                         anchors.verticalCenter: parent.verticalCenter
-                        font.pixelSize: 20
+                        font.pixelSize: 16
                     }
                     TextField { // поле логина
                         text: "00000000"
@@ -190,6 +222,99 @@ ApplicationWindow {
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+
+    Page {
+        id: window_add
+        width: 600
+        height: 450
+        visible: false
+        Rectangle {
+            color: "#303030"
+            width: 600
+            height: 450
+
+            TextField {
+                id: text_site
+                width: 240
+                height: 50
+
+                placeholderText: qsTr("Введите сайт")
+                font.pixelSize: 17
+
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: 310
+            }
+
+            TextField {
+                id: text_login
+                width: 240
+                height: 50
+
+                placeholderText: qsTr("Введите логин")
+                font.pixelSize: 17
+                echoMode: TextInput.Password
+
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: 250
+            }
+
+            TextField {
+                id: text_pass
+                width: 240
+                height: 50
+
+                placeholderText: qsTr("Введите пароль")
+                font.pixelSize: 17
+                echoMode: TextInput.Password
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: 190
+            }
+
+            Button{
+                id: button_new
+                width: 240
+
+                text: "Добавить аккаунт"
+                font.pixelSize: 20
+                height: 50
+                anchors.horizontalCenter: parent.horizontalCenter
+                anchors.bottom: parent.bottom
+                anchors.bottomMargin: 100
+
+                enabled: if (text_site.text =="") false
+                         else true
+                onClicked:{
+                    accountModel.clear()
+                    Backend.get_new_account(text_site.text, text_login.text, text_pass.text);
+                    window_add.visible = false
+                    text_site.text =""
+                    text_login.text =""
+                    text_pass.text = ""
+                }
+
+            }
+
+            Button {
+                height: 40
+                width: 100
+                anchors.bottom: parent.bottom
+                anchors.horizontalCenter: parent.horizontalCenter
+
+                text: "Назад"
+                anchors.bottomMargin: 35
+                font.pixelSize: 14
+                onClicked: {
+                    window_add.visible = false
+                    text_site.text =""
+                    text_login.text =""
+                    text_pass.text = ""
                 }
             }
         }

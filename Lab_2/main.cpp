@@ -22,36 +22,38 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
 
 
-    QProcess *satelliteProcess = new QProcess();
-    int pid = QApplication::applicationPid();
-    //qDebug() << pid;
-    QStringList arguments = {QString::number(pid)};
-    //qDebug() << arguments;
-    satelliteProcess -> start("D:/Notebook/Labs_Kavallini_181_331/Lab_2/build-DebugProtect-Desktop_Qt_5_14_2_MSVC2017_64bit-Debug/debug/DebugProtect.exe", arguments);
-    bool protectorStarted = satelliteProcess -> waitForStarted(1000);
-    qDebug() << protectorStarted;
+//    QProcess *satelliteProcess = new QProcess();
+//    int pid = QApplication::applicationPid();
+//    //qDebug() << pid;
+//    QStringList arguments = {QString::number(pid)};
+//    //qDebug() << arguments;
+//    satelliteProcess -> start("D:/Notebook/Labs_Kavallini_181_331/Lab_2/build-DebugProtect-Desktop_Qt_5_15_2_MSVC2019_64bit-Debug/debug/DebugProtect.exe", arguments);
+//    bool protectorStarted = satelliteProcess -> waitForStarted(1000);
+//    qDebug() << protectorStarted;
 
 
-    QWORD moduleBase = (QWORD)GetModuleHandle(NULL); // начальный адрес, с которого приложение разм. в вирт. памяти
-    QWORD text_segment_start = moduleBase + 0x1000; // адрес сегмента .text
-    //qDebug() << "text_segment_start:" << Qt::hex << text_segment_start << "\n";
+//    QWORD moduleBase = (QWORD)GetModuleHandle(NULL); // начальный адрес, с которого приложение разм. в вирт. памяти
+//    QWORD text_segment_start = moduleBase + 0x1000; // адрес сегмента .text
+//    //qDebug() << "text_segment_start:" << Qt::hex << text_segment_start << "\n";
 
-    PIMAGE_DOS_HEADER pIDH = reinterpret_cast<PIMAGE_DOS_HEADER>(moduleBase); // расположение и размер первого заголовка
-    PIMAGE_NT_HEADERS pINH = reinterpret_cast<PIMAGE_NT_HEADERS>(moduleBase + pIDH -> e_lfanew); // расположение и размер вторых двух заголовков
-    QWORD size_of_text = pINH -> OptionalHeader.SizeOfCode; // величина .text
-    //qDebug() << "size_of_text:" << size_of_text << "\n";
-
-    QByteArray text_segment_contents = QByteArray((char*)text_segment_start, size_of_text);
-    QByteArray current_hash = QCryptographicHash::hash(text_segment_contents, QCryptographicHash::Sha256);
-    QByteArray current_hash_base64 = current_hash.toBase64();
-    //qDebug() << "text_segment_contents:" << Qt::hex << text_segment_contents << "\n";
-    qDebug() << "current_hash_base64:" << current_hash_base64 << "\n";
-
-    const QByteArray hash0_base64 = QByteArray("uOdAt+EfCoIEtOpKkh/f4zySTcy+gdk7W2eTcQwNLmo=");
+//    PIMAGE_DOS_HEADER pIDH = reinterpret_cast<PIMAGE_DOS_HEADER>(moduleBase); // расположение и размер первого заголовка
+//    PIMAGE_NT_HEADERS pINH = reinterpret_cast<PIMAGE_NT_HEADERS>(moduleBase + pIDH -> e_lfanew); // расположение и размер вторых двух заголовков
+//    QWORD size_of_text = pINH -> OptionalHeader.SizeOfCode; // величина .text
+//    //qDebug() << "size_of_text:" << size_of_text << "\n";
 
 
-    bool checkresult = (current_hash_base64 == hash0_base64);
-    qDebug() << "checkresult:" << checkresult << "\n";
+
+//    QByteArray text_segment_contents = QByteArray((char*)text_segment_start, size_of_text);
+//    QByteArray current_hash = QCryptographicHash::hash(text_segment_contents, QCryptographicHash::Sha256);
+//    QByteArray current_hash_base64 = current_hash.toBase64();
+//    //qDebug() << "text_segment_contents:" << Qt::hex << text_segment_contents << "\n";
+//    qDebug() << "current_hash_base64:" << current_hash_base64 << "\n";
+
+//    const QByteArray hash0_base64 = QByteArray("PDII2LAPD4ErLAsBSRwSvKi72Xl6Hea/H7RxweCgH/s=");
+
+
+//    bool checkresult = (current_hash_base64 == hash0_base64);
+//    qDebug() << "checkresult:" << checkresult << "\n";
 //    if (!checkresult){
 //        int result = QMessageBox::critical(nullptr, "Предупреждение", "Приложение было модифицировано!");
 //        return -1;
@@ -77,12 +79,12 @@ int main(int argc, char *argv[])
     }, Qt::QueuedConnection);
     engine.load(url);
 
-    //    bool debuggerFound = IsDebuggerPresent();
-    //    if(debuggerFound){
-    //        qDebug() << "FOUND!!!";
-    //        cout << "FOUND!!!";
-    //        return -1;
-    //    }
 
+//    bool debuggerFound = IsDebuggerPresent();
+//    if(debuggerFound){
+//        qDebug() << "Attempt to connect the debugger!";
+//        cout << "Attempt to connect the debugger!";
+//        return -1;
+//    }
     return app.exec();
 }
