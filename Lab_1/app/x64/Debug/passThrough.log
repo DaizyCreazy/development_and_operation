@@ -1,0 +1,44 @@
+﻿  Building 'passThrough' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
+  Stamping x64\Debug\passThrough.inf
+  Stamping [Version] section with DriverVer=04/22/2022,12.20.7.819
+D:\Notebook\NEKO\Windows-driver-samples-master\Windows-driver-samples-master\filesys\miniFilter\app\passThrough.inf(8-8): warning 1324: [Version] section should specify PnpLockdown=1.
+D:\Notebook\NEKO\Windows-driver-samples-master\Windows-driver-samples-master\filesys\miniFilter\app\passThrough.inf(73-73): warning 1205: Section [MiniFilter.DriverFiles] referenced from DelFiles and CopyFiles directive.
+  aes.c
+D:\Notebook\XYI\VC\Tools\MSVC\14.29.30133\include\vcruntime.h(61,26): warning C4083: требуется ")"; обнаружен идентификатор "_VCRUNTIME_DISABLED_WARNINGS"
+D:\Notebook\XYI\VC\Tools\MSVC\14.29.30133\include\vcruntime.h(111,1): warning C4005: _CRT_STRINGIZE: изменение макроопределения
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\km\crt\crtdefs.h(85): message : см. предыдущее определение "_CRT_STRINGIZE"
+D:\Notebook\XYI\VC\Tools\MSVC\14.29.30133\include\vcruntime.h(114,1): warning C4005: _CRT_WIDE: изменение макроопределения
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\km\crt\crtdefs.h(88): message : см. предыдущее определение "_CRT_WIDE"
+D:\Notebook\XYI\VC\Tools\MSVC\14.29.30133\include\vcruntime.h(155,1): warning C4005: __CRTDECL: изменение макроопределения
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\km\crt\crtdefs.h(640): message : см. предыдущее определение "__CRTDECL"
+D:\Notebook\XYI\VC\Tools\MSVC\14.29.30133\include\stdint.h(16,26): warning C4083: требуется ")"; обнаружен идентификатор "_VCRUNTIME_DISABLED_WARNINGS"
+  passThrough.c
+D:\Notebook\XYI\VC\Tools\MSVC\14.29.30133\include\vcruntime.h(61,26): warning C4083: требуется ")"; обнаружен идентификатор "_VCRUNTIME_DISABLED_WARNINGS"
+D:\Notebook\XYI\VC\Tools\MSVC\14.29.30133\include\vcruntime.h(111,1): warning C4005: _CRT_STRINGIZE: изменение макроопределения
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\km\crt\crtdefs.h(85): message : см. предыдущее определение "_CRT_STRINGIZE"
+D:\Notebook\XYI\VC\Tools\MSVC\14.29.30133\include\vcruntime.h(114,1): warning C4005: _CRT_WIDE: изменение макроопределения
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\km\crt\crtdefs.h(88): message : см. предыдущее определение "_CRT_WIDE"
+D:\Notebook\XYI\VC\Tools\MSVC\14.29.30133\include\vcruntime.h(155,1): warning C4005: __CRTDECL: изменение макроопределения
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\km\crt\crtdefs.h(640): message : см. предыдущее определение "__CRTDECL"
+D:\Notebook\XYI\VC\Tools\MSVC\14.29.30133\include\stdint.h(16,26): warning C4083: требуется ")"; обнаружен идентификатор "_VCRUNTIME_DISABLED_WARNINGS"
+D:\Notebook\NEKO\Windows-driver-samples-master\Windows-driver-samples-master\filesys\miniFilter\app\passThrough.c(810,23): warning C4101: cipher: неиспользованная локальная переменная
+  Создание кода...
+  passThrough.vcxproj -> D:\Notebook\NEKO\Windows-driver-samples-master\Windows-driver-samples-master\filesys\miniFilter\app\x64\Debug\passThrough.sys
+  Done Adding Additional Store
+  Successfully signed: D:\Notebook\NEKO\Windows-driver-samples-master\Windows-driver-samples-master\filesys\miniFilter\app\x64\Debug\passThrough.sys
+  
+  Driver is 'Universal'.
+  ........................
+  Signability test complete.
+  
+  Errors:
+  None
+  
+  Warnings:
+  None
+  
+  Catalog generation complete.
+  D:\Notebook\NEKO\Windows-driver-samples-master\Windows-driver-samples-master\filesys\miniFilter\app\x64\Debug\passThrough\passthrough.cat
+  Done Adding Additional Store
+  Successfully signed: x64\Debug\passThrough\passthrough.cat
+  
