@@ -1,0 +1,2 @@
+^D:\NOTEBOOK\LABS_KAVALLINI_181_331\LAB_3\ENCLAVE\ENCLAVE.EDL
+"D:\Notebook\env1\\bin\win32\Release\sgx_edger8r.exe" --untrusted ".\enclave\enclave.edl" --search-path ".\enclave;D:\Notebook\env1\\include"
