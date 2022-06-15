@@ -1,0 +1,6 @@
+﻿  read_write_app.cpp
+  Создание кода
+  Previous IPDB not found, fall back to full compilation.
+  All 4 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  read_write_app.vcxproj -> D:\Notebook\NEKO\Windows-driver-samples-master\Windows-driver-samples-master\filesys\read_write_app\x64\Release\read_write_app.exe
