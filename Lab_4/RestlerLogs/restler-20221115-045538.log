@@ -1,0 +1,38 @@
+Restler Information: 0 : Starting task FuzzLean...
+    DateTime=2022-11-15T13:55:39.1214211Z
+Restler Information: 0 : Launching 'python.exe --version'
+    DateTime=2022-11-15T13:55:39.2402451Z
+Restler Information: 0 : Process execution terminated in 00:00:00.0345441 with exit code 0x0: 'python.exe --version'
+    DateTime=2022-11-15T13:55:39.2842794Z
+Restler Information: 0 : (3076) python.exe --version exited with code: 0
+    DateTime=2022-11-15T13:55:39.2961158Z
+Restler Information: 0 : Launching 'python.exe -B "D:\Notebook\NEKO\Nedo\laba_4\restler_bin\restler\../engine/restler.py" --restler_grammar "D:\Notebook\NEKO\Nedo\laba_4\Compile\grammar.py" --custom_mutations "D:\Notebook\NEKO\Nedo\laba_4\Compile\dict.json" --set_version 9.1.0    --no_ssl   --settings "D:\Notebook\NEKO\Nedo\laba_4\Compile\engine_settings.json" --enable_checkers * --disable_checkers namespacerule    --include_user_agent --no_tokens_in_logs t --garbage_collection_interval 30 --fuzzing_mode directed-smoke-test'
+    DateTime=2022-11-15T13:55:39.3199298Z
+Restler Information: 0 : Process execution terminated in 01:01:29.9509367 with exit code 0x0: 'python.exe -B "D:\Notebook\NEKO\Nedo\laba_4\restler_bin\restler\../engine/restler.py" --restler_grammar "D:\Notebook\NEKO\Nedo\laba_4\Compile\grammar.py" --custom_mutations "D:\Notebook\NEKO\Nedo\laba_4\Compile\dict.json" --set_version 9.1.0    --no_ssl   --settings "D:\Notebook\NEKO\Nedo\laba_4\Compile\engine_settings.json" --enable_checkers * --disable_checkers namespacerule    --include_user_agent --no_tokens_in_logs t --garbage_collection_interval 30 --fuzzing_mode directed-smoke-test'
+    DateTime=2022-11-15T14:57:09.2921379Z
+Restler Information: 0 : (3652) python.exe -B "D:\Notebook\NEKO\Nedo\laba_4\restler_bin\restler\../engine/restler.py" --restler_grammar "D:\Notebook\NEKO\Nedo\laba_4\Compile\grammar.py" --custom_mutations "D:\Notebook\NEKO\Nedo\laba_4\Compile\dict.json" --set_version 9.1.0    --no_ssl   --settings "D:\Notebook\NEKO\Nedo\laba_4\Compile\engine_settings.json" --enable_checkers * --disable_checkers namespacerule    --include_user_agent --no_tokens_in_logs t --garbage_collection_interval 30 --fuzzing_mode directed-smoke-test exited with code: 0
+    DateTime=2022-11-15T14:57:09.2934599Z
+Restler Information: 0 : Launching 'dotnet "D:\Notebook\NEKO\Nedo\laba_4\restler_bin\restler\../resultsAnalyzer/Restler.ResultsAnalyzer.dll" analyze "D:\Notebook\NEKO\Nedo\laba_4\FuzzLean" --output_dir "D:\Notebook\NEKO\Nedo\laba_4\FuzzLean\ResponseBuckets" --dictionary_file "D:\Notebook\NEKO\Nedo\laba_4\Compile\dict.json" --max_instances_per_bucket 10'
+    DateTime=2022-11-15T14:57:09.5681484Z
+Restler Information: 0 : Process execution terminated in 00:05:24.1643783 with exit code 0x0: 'dotnet "D:\Notebook\NEKO\Nedo\laba_4\restler_bin\restler\../resultsAnalyzer/Restler.ResultsAnalyzer.dll" analyze "D:\Notebook\NEKO\Nedo\laba_4\FuzzLean" --output_dir "D:\Notebook\NEKO\Nedo\laba_4\FuzzLean\ResponseBuckets" --dictionary_file "D:\Notebook\NEKO\Nedo\laba_4\Compile\dict.json" --max_instances_per_bucket 10'
+    DateTime=2022-11-15T15:02:33.7406799Z
+Restler Information: 0 : (16480) dotnet "D:\Notebook\NEKO\Nedo\laba_4\restler_bin\restler\../resultsAnalyzer/Restler.ResultsAnalyzer.dll" analyze "D:\Notebook\NEKO\Nedo\laba_4\FuzzLean" --output_dir "D:\Notebook\NEKO\Nedo\laba_4\FuzzLean\ResponseBuckets" --dictionary_file "D:\Notebook\NEKO\Nedo\laba_4\Compile\dict.json" --max_instances_per_bucket 10 exited with code: 0
+    DateTime=2022-11-15T15:02:33.7423160Z
+Restler Information: 0 : Request coverage (successful / total): 0 / 13
+    DateTime=2022-11-15T15:02:34.8073259Z
+Restler Information: 0 : Attempted requests: 13 / 13
+    DateTime=2022-11-15T15:02:34.8083314Z
+Restler Information: 0 : Bugs were found!
+    DateTime=2022-11-15T15:02:34.8533459Z
+Restler Information: 0 : Bug buckets:
+    DateTime=2022-11-15T15:02:34.8539017Z
+Restler Information: 0 : 
+InvalidValueChecker_500: 6
+InvalidValueChecker_timeout: 1
+PayloadBodyChecker_500: 60
+main_driver_500: 6
+    DateTime=2022-11-15T15:02:34.8563224Z
+Restler Information: 0 : Task FuzzLean succeeded.
+    DateTime=2022-11-15T15:02:34.8756923Z
+Restler Information: 0 : Collecting logs...
+    DateTime=2022-11-15T15:02:34.8972449Z
